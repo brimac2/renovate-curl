@@ -1,4 +1,5 @@
-FROM alpine:latest
+# renovate: datasource=docker depName=alpine
+FROM alpine:3.18 
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
 ENV CURL_TAG_VERSION=8_0_1
