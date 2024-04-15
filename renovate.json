@@ -11,7 +11,7 @@
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)"],
+      "matchStrings": ["FROM (?<depName>[\\w.-]+/\\w+):(?<currentValue>\\S+)-alpine(?<currentDigest>\\S+) AS builder"],
       "datasourceTemplate": "docker"
     }
   ],
