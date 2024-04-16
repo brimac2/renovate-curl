@@ -11,7 +11,7 @@
   "dockerfile": {
     "packageRules": [
       {
-        "matchUpdateTypes": ["major"],
+        "matchDatasources": ["major"],
         "matchPackageNames": ["common-docker.repository.swedbank.net/node"],
         "enabled": true
       }
@@ -19,20 +19,11 @@
   },
   "regexManagers": [
     {
-      "fileMatch": [".*Dockerfile"],
-      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)-alpine(?<currentDigest>\\S+) AS builder"],
-      "datasourceTemplate": "docker"
-    }
-  ],
-  "packageRules": [
-    {
-      "matchPackageNames": ["git/git", "helm/helm"],
-      "extractVersion": "^v(?<version>.*)$"
-    },
-    {
-      "matchPackageNames": ["curl/curl"],
-      "extractVersion": "^curl-(?<version>.*)$",
-      "versioning": "regex:^(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$"
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["FROM (?<depName>[^:]+):(?<currentValue>[^@]+)@(?<currentDigest>sha256:[a-f0-9]+)"],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     }
   ]
+
 }
