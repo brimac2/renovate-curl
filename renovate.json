@@ -19,11 +19,14 @@
   },
   "regexManagers": [
     {
-      "fileMatch": [".*Dockerfile"],
-      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)-alpine(?<currentDigest>\\S+) AS builder"],
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["FROM node:(?<currentValue>\\S+)-alpine(?<currentAlpineVersion>\\d+\\.\\d+) AS builder"],
+      "depNameTemplate": "node",
+      "currentValueTemplate": "{{currentValue}}-alpine{{currentAlpineVersion}}",
       "datasourceTemplate": "docker"
     }
-  ],
+  ]
+  ,
   "packageRules": [
     {
       "matchPackageNames": ["git/git", "helm/helm"],
