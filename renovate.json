@@ -17,13 +17,7 @@
       }
     ]
   },
-  "regexManagers": [
-    {
-      "fileMatch": [".*Dockerfile"],
-      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)-alpine(?<currentDigest>\\S+) AS builder"],
-      "datasourceTemplate": "docker"
-    }
-  ],
+
   "packageRules": [
     {
       "matchPackageNames": ["git/git", "helm/helm"],
@@ -33,6 +27,12 @@
       "matchPackageNames": ["curl/curl"],
       "extractVersion": "^curl-(?<version>.*)$",
       "versioning": "regex:^(?<major>\\d+)_(?<minor>\\d+)_(?<patch>\\d+)$"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["node|alpine"],
+      "extractVersion": "^\\w+:(?<version>.+)-alpine(?<alpine_version>[\\d.]+)$",
+      "versioning": "loose"
     }
   ]
 }
