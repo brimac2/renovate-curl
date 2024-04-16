@@ -8,10 +8,19 @@
     "enabled": true,
     "bumpVersion": "patch"
   },
+  "dockerfile": {
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["major"],
+        "matchPackageNames": ["common-docker.repository.swedbank.net/node"],
+        "enabled": true
+      }
+    ]
+  },
   "regexManagers": [
     {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)"],
+      "fileMatch": [".*Dockerfile"],
+      "matchStrings": ["FROM (?<depName>\\S+):(?<currentValue>\\S+)-alpine(?<currentDigest>\\S+) AS builder"],
       "datasourceTemplate": "docker"
     }
   ],

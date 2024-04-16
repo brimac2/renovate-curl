@@ -1,5 +1,6 @@
-# renovate: datasource=docker depName=alpine
-FROM alpine:3.15 
+# renovate: datasource=docker depName=alpine 
+FROM node:14.18.1-alpine3.14 AS builder
+
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
 ENV CURL_TAG_VERSION=8_0_1
 # renovate: datasource=github-tags depName=Git lookupName=git/git
