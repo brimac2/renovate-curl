@@ -1,5 +1,5 @@
 
-# renovate: datasource=repology depName=alpine_3_16/iptables versioning=loose
+# renovate: datasource=repology depName=alpine_3_19/iptables versioning=loose
 FROM node:20.12.0-alpine3.16 AS builder
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
