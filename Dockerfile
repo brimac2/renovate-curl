@@ -1,5 +1,5 @@
 # renovate: datasource=docker depName=alpine versioning=semver
-FROM node:18.20-alpine AS builder
+FROM node:20.12-alpine AS builder
 
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
