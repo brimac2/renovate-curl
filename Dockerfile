@@ -1,6 +1,6 @@
 
 # renovate: datasource=docker depName=node versioning=docker
-FROM node:14.19.1-alpine3.14@sha256:26af1db2431005cb34f6df34e1f2748518b8082fb4e1e6b7793de0bb95da491a
+FROM node:18.3.0-alpine3.14@sha256:b1125585ef9a08dc65689ca22528347e338cee827035ba79ff5861b8365c5bcf
 
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
