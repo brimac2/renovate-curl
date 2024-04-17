@@ -1,5 +1,5 @@
 
-FROM node:20-alpine AS builder
+FROM node:21-alpine AS builder
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
 ENV CURL_TAG_VERSION=8_0_1
