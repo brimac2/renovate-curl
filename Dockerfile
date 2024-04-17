@@ -4,7 +4,7 @@ FROM node:18.20 as builder
 # ... build your application ...
 
 # renovate: datasource=docker depName=alpine versioning=semver
-FROM alpine:3.18
+FROM alpine:3.19
 
 # renovate: datasource=github-releases depName=curl lookupName=curl/curl
 ENV CURL_TAG_VERSION=8_0_1
