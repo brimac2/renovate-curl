@@ -4,6 +4,6 @@ dependencies:
   version: 13.18.5
 - name: nx-cloud
   repository: https://nrwl.github.io/nx-cloud-helm
-  version: 0.11.1
-digest: sha256:0f39b4e825578cb0c05a637319361ad6259d9b244336d2aaca570cda8952d716
-generated: "2023-10-23T09:54:49.764814+03:00"
+  version: 0.15.4
+digest: sha256:1a7ad29e07638552dc704fda6598f8f9f586ab2a32176f8369d6d878a416f514
+generated: "2024-06-14T17:26:03.183978276Z"
