@@ -2,11 +2,11 @@ apiVersion: v2
 name: nx-cloud
 description: A Helm chart for Nrwl Nx Cloud
 type: application
-version: 0.0.1
+version: 0.0.2
 dependencies:
   - name: mongodb
     repository: https://charts.bitnami.com/bitnami
-    version: 13.18.5
+    version: 16.1.0
     condition: mongodb.enabled
   - name: nx-cloud
     repository: https://nrwl.github.io/nx-cloud-helm

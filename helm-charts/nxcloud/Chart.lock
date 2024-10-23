@@ -1,9 +1,9 @@
 dependencies:
 - name: mongodb
   repository: https://charts.bitnami.com/bitnami
-  version: 13.18.5
+  version: 16.1.0
 - name: nx-cloud
   repository: https://nrwl.github.io/nx-cloud-helm
   version: 0.11.1
-digest: sha256:0f39b4e825578cb0c05a637319361ad6259d9b244336d2aaca570cda8952d716
-generated: "2023-10-23T09:54:49.764814+03:00"
+digest: sha256:22c4a3d2f9d171f6cee32e8623a87bfc62d2fa72f70e01b13bd7ef5c0d372ceb
+generated: "2024-10-23T09:18:57.845691314Z"
